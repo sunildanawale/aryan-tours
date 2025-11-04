@@ -1,181 +1,588 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Aryan Tours & Travels — Mahabaleshwar • Panchgani</title>
-<meta name="description" content="Hotel booking, taxi service, local sightseeing, pickup & drop, bus booking — Mahabaleshwar & Panchgani. Book tours online and pay via UPI or Razorpay." />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aryan Tours & Travels — Mahabaleshwar • Panchgani</title>
+  <meta name="description" content="Hotel booking, taxi service, local sightseeing, pickup & drop, bus booking — Mahabaleshwar & Panchgani. Book tours online and pay via UPI or Razorpay." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --bg:#f5fbff;
-  --card:#fff;
-  --text:#072033;
-  --muted:#6b7280;
-  --accent1:#06a6c7;
-  --accent2:#ff6b6b;
-  --accent3:#f6c85f;
-  --radius:14px;
-  --shadow:0 10px 30px rgba(8,18,30,0.08);
-  font-family:Inter,Poppins,system-ui;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:linear-gradient(180deg,#e9fbff,#fff);color:var(--text)}
-header{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 6px 20px rgba(8,18,30,0.08)}
-.brand{display:flex;align-items:center;gap:14px}
-.brand img{height:60px;width:auto;border-radius:10px;background:#fff;padding:4px}
-nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
-nav a:hover{text-decoration:underline}
-.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:44px 28px}
-.hero-left h1{font-size:34px;margin-bottom:12px;line-height:1.05}
-.muted{color:var(--muted)}
-.service-chip{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.9);margin-right:10px;font-weight:600;font-size:13px;box-shadow:0 6px 18px rgba(12,18,32,0.05)}
-.btn{cursor:pointer;border-radius:10px;padding:10px 16px;border:none;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff;font-weight:800;transition:.3s}
-.btn:hover{opacity:.9;transform:translateY(-2px)}
-.btn.alt{background:transparent;border:1px solid rgba(8,18,30,0.08);color:var(--text);font-weight:700}
-.hero-right{background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=60');background-size:cover;background-position:center;border-radius:18px;padding:18px;color:#fff;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)}
-.callout{backdrop-filter:blur(6px);background:rgba(0,0,0,0.45);padding:14px;border-radius:12px}
-main{max-width:1200px;margin:20px auto;padding:0 18px 64px}
-.grid{display:grid;grid-template-columns:1fr 380px;gap:22px}
-.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-top:16px}
-h2{margin-bottom:6px;font-size:22px}
-.sight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:10px}
-.pkg{border-radius:12px;padding:14px;background:#fff;box-shadow:0 8px 24px rgba(8,18,30,0.06);transition:transform .18s,box-shadow .18s}
-.pkg:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(8,18,30,0.12)}
-.pkg .tag{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#fff}
-.pkg h3{margin:6px 0 0;font-size:18px}
-.pkg ul{margin:6px 0 0;padding-left:16px;color:var(--muted);font-size:14px}
-.price{background:linear-gradient(90deg,var(--accent3),#ffd77a);padding:6px 10px;border-radius:10px;font-weight:800}
-.pickup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px}
-.route{background:#fff;border-radius:12px;padding:12px;box-shadow:0 8px 20px rgba(8,18,30,0.06);display:flex;flex-direction:column;gap:8px}
-.route .meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.route .dest{font-weight:700}
-.tag-small{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(6,166,199,0.08);font-weight:700;font-size:13px;color:var(--accent1)}
-input,select,textarea{padding:10px;border-radius:10px;border:1px solid #e6f0f5;font-size:15px;width:100%}
-label{font-size:13px;color:var(--muted);margin-bottom:4px}
-.field{margin-bottom:10px}
-footer{padding:28px;text-align:center;color:var(--muted);background:#fafafa;margin-top:20px}
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .grid{grid-template-columns:1fr}
-  nav{display:none}
-}
-</style>
+  <style>
+    :root{
+      --bg:#f5fbff;
+      --card:#ffffff;
+      --text:#072033;
+      --muted:#6b7280;
+      --accent1:#06a6c7;
+      --accent2:#ff6b6b;
+      --accent3:#f6c85f;
+      --radius:14px;
+      --shadow: 0 10px 30px rgba(8,18,30,0.08);
+      font-family: Inter, Poppins, system-ui;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:linear-gradient(180deg,#e9fbff,#ffffff);color:var(--text);-webkit-font-smoothing:antialiased}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;position:sticky;top:0;z-index:50;box-shadow:0 6px 20px rgba(8,18,30,0.08)}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:rgba(255,255,255,0.1);display:grid;place-items:center;font-weight:800;font-size:18px}
+    nav a{color:white;text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{text-decoration:underline}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:44px 28px}
+    .hero-left h1{font-size:34px;margin-bottom:12px;line-height:1.05}
+    .muted{color:var(--muted)}
+    .service-chip{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.9);margin-right:10px;font-weight:600;font-size:13px;box-shadow:0 6px 18px rgba(12,18,32,0.05)}
+    .btn{cursor:pointer;border-radius:10px;padding:10px 16px;border:none;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;font-weight:800;transition:0.3s}
+    .btn:hover{opacity:0.9;transform:translateY(-2px)}
+    .btn.alt{background:transparent;border:1px solid rgba(8,18,30,0.08);color:var(--text);font-weight:700}
+    .hero-right{background-image:url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=60');background-size:cover;background-position:center;border-radius:18px;padding:18px;color:white;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:var(--shadow)}
+    .callout{backdrop-filter:blur(6px);background:rgba(0,0,0,0.45);padding:14px;border-radius:12px}
+
+    main{max-width:1200px;margin:20px auto;padding:0 18px 64px}
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:22px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);margin-top:16px}
+    h2{margin-bottom:6px;font-size:22px}
+
+    .sight-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-top:10px}
+    .pkg{border-radius:12px;padding:14px;background:#fff;box-shadow:0 8px 24px rgba(8,18,30,0.06);transition:transform .18s, box-shadow .18s}
+    .pkg:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(8,18,30,0.12)}
+    .pkg .tag{display:inline-block;padding:6px 10px;border-radius:999px;font-weight:700;font-size:13px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white}
+    .pkg h3{margin:6px 0 0;font-size:18px}
+    .pkg ul{margin:6px 0 0;padding-left:16px;color:var(--muted);font-size:14px}
+    .price{background:linear-gradient(90deg,var(--accent3),#ffd77a);padding:6px 10px;border-radius:10px;font-weight:800}
+
+    .pickup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px}
+    .route{background:#fff;border-radius:12px;padding:12px;box-shadow:0 8px 20px rgba(8,18,30,0.06);display:flex;flex-direction:column;gap:8px}
+    .route .meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .route .dest{font-weight:700}
+    .tag-small{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(6,166,199,0.08);font-weight:700;font-size:13px;color:var(--accent1)}
+
+    input,select,textarea{padding:10px;border-radius:10px;border:1px solid #e6f0f5;font-size:15px;width:100%}
+    label{font-size:13px;color:var(--muted);margin-bottom:4px}
+    .field{margin-bottom:10px}
+    footer{padding:28px;text-align:center;color:var(--muted);background:#fafafa;margin-top:20px}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
 </head>
 <body>
-<header>
-  <div class="brand">
-    <img src="logo.png" alt="Aryan Tours and Travels Logo">
-    <div>
-      <div style="font-weight:800;font-size:18px">Aryan Tours & Travels</div>
-      <div style="font-size:12px;opacity:.95">Mahabaleshwar • Panchgani</div>
+  <header>
+    <div class="brand">
+      <div class="logo">AT</div>
+      <div>
+        <div style="font-weight:800">Aryan Tours & Travels</div>
+        <div style="font-size:12px;opacity:0.95">Mahabaleshwar • Panchgani</div>
+      </div>
     </div>
-  </div>
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#sightseeing">Sightseeing</a>
-    <a href="#pickup">Pickup & Drop</a>
-    <a href="#booking">Book</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#sightseeing">Sightseeing</a>
+      <a href="#pickup">Pickup & Drop</a>
+      <a href="#booking">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-left">
-    <h1>Explore Mahabaleshwar & Panchgani — Easy bookings, Local care</h1>
-    <p class="muted">Hotels, taxis, sightseeing, pickup & drop, and bus tickets — curated tours with flexible payments. Book online and pay via UPI or card.</p>
-    <div style="margin:14px 0">
-      <span class="service-chip">Trusted Drivers</span>
-      <span class="service-chip">Local Guides</span>
-      <span class="service-chip">24/7 Support</span>
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Explore Mahabaleshwar & Panchgani — Easy bookings, Local care</h1>
+      <p class="muted">Hotels, taxis, sightseeing, pickup & drop, and bus tickets — curated tours with flexible payments. Book online and pay via UPI or card.</p>
+      <div style="margin:14px 0">
+        <span class="service-chip">Trusted Drivers</span>
+        <span class="service-chip">Local Guides</span>
+        <span class="service-chip">24/7 Support</span>
+      </div>
+      <div>
+        <a class="btn" href="#booking">Book a Tour</a>
+        <a class="btn alt" href="#contact">Inquiry</a>
+      </div>
     </div>
-    <div>
-      <a class="btn" href="#booking">Book a Tour</a>
-      <a class="btn alt" href="#contact">Inquiry</a>
-    </div>
-  </div>
 
-  <aside class="hero-right">
-    <div class="callout">
-      <strong style="font-size:18px">Quick Inquiry</strong>
-      <p>Enter your details and we’ll reach out soon.</p>
-      <form id="inquiryForm">
-        <input name="name" placeholder="Your name" required style="margin-bottom:8px">
-        <input name="phone" placeholder="Phone" required style="margin-bottom:8px">
-        <select name="service" required style="margin-bottom:8px">
-          <option>Hotel Booking</option>
-          <option>Taxi Service</option>
-          <option>Sightseeing</option>
-          <option>Bus Booking</option>
-          <option>Pickup & Drop</option>
-        </select>
-        <input type="hidden" name="_subject" value="Quick Inquiry from Aryan Tours Website">
-        <button class="btn" style="width:100%">Send</button>
-      </form>
-      <div id="inquiryResult" style="margin-top:8px"></div>
-    </div>
-  </aside>
-</section>
-
-<!-- Main Content -->
-<main>
-<div class="grid">
-<div>
-  <section id="services" class="card">
-    <h2>Our Services</h2>
-    <p class="muted">From hotel reservations to scenic drives — we cover everything.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
-      <div class="service-chip">Hotel Booking</div>
-      <div class="service-chip">Taxi Transfers</div>
-      <div class="service-chip">Sightseeing Tours</div>
-      <div class="service-chip">Bus Booking</div>
-      <div class="service-chip">Custom Itineraries</div>
-    </div>
+    <aside class="hero-right">
+      <div class="callout">
+        <strong style="font-size:18px">Quick Inquiry</strong>
+        <p>Enter your details and we’ll reach out soon.</p>
+        <form id="inquiryForm">
+          <input name="name" placeholder="Your name" required style="margin-bottom:8px">
+          <input name="phone" placeholder="Phone" required style="margin-bottom:8px">
+          <select name="service" required style="margin-bottom:8px">
+            <option>Hotel Booking</option>
+            <option>Taxi Service</option>
+            <option>Sightseeing</option>
+            <option>Bus Booking</option>
+            <option>Pickup & Drop</option>
+          </select>
+          <input type="hidden" name="_subject" value="Quick Inquiry from Aryan Tours Website">
+          <button class="btn" style="width:100%">Send</button>
+        </form>
+        <div id="inquiryResult" style="margin-top:8px"></div>
+      </div>
+    </aside>
   </section>
 
-  <!-- Sightseeing Packages -->
-  <!-- (Six sightseeing packages and full Pickup & Drop sections go here – unchanged from previous version you already received) -->
+  <main>
+    <div class="grid">
+      <div>
+        <section id="services" class="card">
+          <h2>Our Services</h2>
+          <p class="muted">From hotel reservations to scenic drives — we cover everything.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:10px">
+            <div class="service-chip">Hotel Booking</div>
+            <div class="service-chip">Taxi Transfers</div>
+            <div class="service-chip">Sightseeing Tours</div>
+            <div class="service-chip">Bus Booking</div>
+            <div class="service-chip">Custom Itineraries</div>
+          </div>
+        </section>
 
-  <!-- Booking Form -->
-  <!-- (Booking and contact sections with script remain exactly the same as in the previous full code) -->
-</div>
-</div>
-</main>
+        <!-- SIGHTSEEING: FULL SET OF 6 TOURS (from your PDF) -->
+        <section id="sightseeing" class="card">
+          <h2>Sightseeing Packages</h2>
+          <p class="muted">Choose any of our guided/driver-assisted half-day and full-day tours.</p>
 
-<footer>© <span id="year"></span> Aryan Tours & Travels — Mahabaleshwar • Panchgani</footer>
+          <div class="sight-grid">
+            <!-- 1: Mahabaleshwar Darshan (1) -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 1</div><div class="price">₹1,200</div>
+              </div>
+              <h3>Mahabaleshwar Darshan — Classic</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
+              <ul>
+                <li>Old Mahabaleshwar, Panchganga Temple, Lord Shiva Temple</li>
+                <li>Arthur's Seat, Window Point, Tiger Spring, Hunting Point</li>
+                <li>Malcolm Point, Echo Point, Castle Rock Point, Savitri Point</li>
+                <li>Marjorie Point, Elphinstone (Upper & Lower), Kate's Point, Needle Hole</li>
+                <li>Includes a free visit to Strawberry Garden.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Mahabaleshwar Classic')">Book Now</button>
+            </div>
 
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-function autoFill(title){
-  const s=document.querySelector('#bookingForm [name=service]');
-  const n=document.querySelector('#bookingForm [name=notes]');
-  s.value='Sightseeing';n.value=title;
-  document.querySelector('#booking').scrollIntoView({behavior:'smooth'});
-}
-function autoFillPickup(t){
-  const s=document.querySelector('#bookingForm [name=service]');
-  const n=document.querySelector('#bookingForm [name=notes]');
-  s.value='Pickup & Drop';n.value=t;
-  document.querySelector('#booking').scrollIntoView({behavior:'smooth'});
-}
-async function submitForm(form,res){
-  res.innerHTML="Sending...";
-  const fd=new FormData(form);
-  try{
-    const r=await fetch("https://formspree.io/f/xldoyojr",{method:"POST",body:fd,headers:{'Accept':'application/json'}});
-    if(r.ok){res.innerHTML=`<div style="padding:12px;background:#ecfdf5;border-radius:10px">✅ Thank you! Your message has been sent successfully.</div>`;form.reset();}
-    else res.innerHTML=`<div style="padding:12px;background:#fef2f2;border-radius:10px">❌ Something went wrong. Please try again.</div>`;
-  }catch{res.innerHTML=`<div style="padding:12px;background:#fef2f2;border-radius:10px">❌ Network error. Please check your connection.</div>`;}
-  setTimeout(()=>{res.innerHTML='';},8000);
-}
-const bookingForm=document.getElementById('bookingForm');
-const bookingResult=document.getElementById('bookingResult');
-if(bookingForm)bookingForm.addEventListener('submit',e=>{e.preventDefault();submitForm(bookingForm,bookingResult);});
-const inquiryForm=document.getElementById('inquiryForm');
-const inquiryResult=document.getElementById('inquiryResult');
-if(inquiryForm)inquiryForm.addEventListener('submit',e=>{e.preventDefault();submitForm(inquiryForm,inquiryResult);});
-</script>
+            <!-- 2: Mahabaleshwar Darshan (2) -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 2</div><div class="price">₹1,200</div>
+              </div>
+              <h3>Mahabaleshwar Darshan — Panoramic</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
+              <ul>
+                <li>Wilson Point (sunrise), Ganesh Temple (Machutar village), Plato Point</li>
+                <li>King's Chair Point, Lingmala Waterfall, Venna Mini Dam</li>
+                <li>Lodwick Point, Mumbai Point and other scenic viewpoints.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Mahabaleshwar Panoramic')">Book Now</button>
+            </div>
+
+            <!-- 3: Pratapgadh -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 3</div><div class="price">₹1,600</div>
+              </div>
+              <h3>Pratapgadh Fort Tour</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
+              <ul>
+                <li>Pratapgadh Fort, Bhavani Mata Temple, Pratap Garden</li>
+                <li>Shivaji Maharaj Statue, Kadelat Point, Tomb of Afzal Khan</li>
+                <li>Shivkalin Village (Pratapgadh Machi) and historical sights.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Pratapgadh Fort Tour')">Book Now</button>
+            </div>
+
+            <!-- 4: Panchgani -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 4</div><div class="price">₹1,200</div>
+              </div>
+              <h3>Panchgani Darshan</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:00 Hrs</div>
+              <ul>
+                <li>Parsi Point, Table Land (caves), Museum (Gureghar)</li>
+                <li>Bhilaar Waterfall (seasonal), Avis World Theme Park / Velocity</li>
+                <li>Mapro Garden visit included in many itineraries.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Panchgani Darshan')">Book Now</button>
+            </div>
+
+            <!-- 5: Wai -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 5</div><div class="price">₹2,500</div>
+              </div>
+              <h3>Wai Darshan (Full Day)</h3>
+              <div class="muted" style="font-size:13px">Duration: 6:00 Hrs</div>
+              <ul>
+                <li>Sydney Point, Wai town, Shri Ganesh Temple, Kashivishveshwar Temple</li>
+                <li>Dhom Dam, Nana Phadnavis Wada (Menavli), Mapro factory (Shendurjane, Wai)</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Wai Darshan')">Book Now</button>
+            </div>
+
+            <!-- 6: Tapola -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 6</div><div class="price">₹1,450</div>
+              </div>
+              <h3>Tapola Darshan (Mini Kashmir)</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
+              <ul>
+                <li>Mini Kashmir scenery, water sports at Shivsagar, lake visits</li>
+                <li>Honey Village (Manghar) and local attractions.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Tapola Darshan')">Book Now</button>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- PICKUP & DROP (new separate section) -->
+        <section id="pickup" class="card">
+          <h2>Out of Mahabaleshwar — Pickup & Drop</h2>
+          <p class="muted">Rates shown are base route charges. Toll charges are extra (shown as “+ Toll”). Choose your route and press Book Now to autofill the form.</p>
+
+          <h3 style="margin-top:12px">Nearby Routes 🚗</h3>
+          <div class="pickup-grid">
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Satara Bus Stand</span></div>
+                <div class="price">₹2,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Short / Nearby pickup and drop.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Satara Bus Stand — ₹2,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Satara Railway Station</span></div>
+                <div class="price">₹2,300 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Railway station transfers.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Satara Railway Station — ₹2,300 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Wathar Railway Station</span></div>
+                <div class="price">₹2,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Railway transfers and short outstation.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Wathar Railway Station — ₹2,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Poladpur</span></div>
+                <div class="price">₹2,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Coastal / Konkan route.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Poladpur — ₹2,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Mahad</span></div>
+                <div class="price">₹2,300 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Mahad transfers.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mahad — ₹2,300 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Kas Pathar</span></div>
+                <div class="price">₹3,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Hill / plateau pickup.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Kas Pathar — ₹3,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Sajjangad</span></div>
+                <div class="price">₹3,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Pilgrimage / fort pickup.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Sajjangad — ₹3,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Wai</span></div>
+                <div class="price">₹1,200 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Nearby town transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Wai — ₹1,200 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Mapro Garden</span></div>
+                <div class="price">₹600 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Short local drop to Mapro Garden / factory.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mapro Garden — ₹600 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+          </div>
+
+          <h3 style="margin-top:16px">Long Distance Routes 🏙️</h3>
+          <div class="pickup-grid">
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Pune Railway Station</span></div>
+                <div class="price">₹3,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Station transfer to Pune.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Pune Railway Station — ₹3,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Pune Airport</span></div>
+                <div class="price">₹4,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Airport pickups / drops.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Pune Airport — ₹4,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Mumbai (Vashi / Dadar)</span></div>
+                <div class="price">₹7,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">City / station transfers to Mumbai suburbs.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mumbai (Vashi / Dadar) — ₹7,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Mumbai Airport</span></div>
+                <div class="price">₹8,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Airport transfers to Mumbai.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mumbai Airport — ₹8,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Kolhapur</span></div>
+                <div class="price">₹6,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Long-distance road transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Kolhapur — ₹6,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Sangli</span></div>
+                <div class="price">₹6,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Long distance / intercity transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Sangli — ₹6,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Alibaug</span></div>
+                <div class="price">₹5,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Coastal town transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Alibaug — ₹5,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Matheran</span></div>
+                <div class="price">₹7,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Hill station transfer (note: Matheran has vehicle rules for last mile).</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Matheran — ₹7,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Ganpatipule</span></div>
+                <div class="price">₹6,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Coastal pilgrimage / long distance.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Ganpatipule — ₹6,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Chiplun</span></div>
+                <div class="price">₹3,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Konkan route transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Chiplun — ₹3,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Khed</span></div>
+                <div class="price">₹3,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Konkan / highway transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Khed — ₹3,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Lonawala / Khandala</span></div>
+                <div class="price">₹5,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Hill station route towards Pune-Mumbai ghats.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Lonavala / Khandala — ₹5,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- BOOKING FORM -->
+        <section id="booking" class="card">
+          <h2>Book Your Tour / Transfer</h2>
+          <form id="bookingForm">
+            <div class="field"><label>Full Name</label><input name="fullname" required></div>
+            <div class="field"><label>Phone</label><input name="phone" required></div>
+            <div class="field"><label>Service</label>
+              <select name="service" required>
+                <option>Hotel Booking</option><option>Taxi Service</option><option>Sightseeing</option><option>Pickup & Drop</option>
+              </select>
+            </div>
+            <div class="field"><label>Date</label><input type="date" name="date" required></div>
+            <div class="field"><label>Notes</label><textarea name="notes" rows="3"></textarea></div>
+            <input type="hidden" name="_subject" value="Tour Booking from Aryan Tours Website">
+            <button class="btn" type="submit">Submit Booking</button>
+          </form>
+          <div id="bookingResult" style="margin-top:12px"></div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card" id="contact">
+          <h3>Contact</h3>
+          <p style="margin:6px 0">Aryan Tours & Travels<br>Mahabaleshwar & Panchgani</p>
+          <p><strong>Phone:</strong> <a href="tel:+91992288244" style="color:var(--accent1)">+91 992288244</a></p>
+          <p><strong>Email:</strong> <a href="mailto:aryansdtravels@gmail.com" style="color:var(--accent1)">aryansdtravels@gmail.com</a></p>
+        </div>
+        <div class="card">
+          <h3>Why Choose Us?</h3>
+          <ul style="margin-left:18px;color:var(--muted)">
+            <li>Local expertise</li><li>Affordable prices</li><li>24/7 Support</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>© <span id="year"></span> Aryan Tours & Travels — Mahabaleshwar • Panchgani</footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Autofill for sightseeing packages
+    function autoFill(title){
+      const formService = document.querySelector('#bookingForm [name=service]');
+      const notes = document.querySelector('#bookingForm [name=notes]');
+      formService.value = 'Sightseeing';
+      notes.value = title;
+      document.querySelector('#bookingForm [name=date]').focus();
+      document.querySelector('#booking').scrollIntoView({behavior:'smooth'});
+    }
+
+    // Autofill for pickup routes
+    function autoFillPickup(routeText){
+      const formService = document.querySelector('#bookingForm [name=service]');
+      const notes = document.querySelector('#bookingForm [name=notes]');
+      formService.value = 'Pickup & Drop';
+      notes.value = routeText;
+      document.querySelector('#bookingForm [name=date]').focus();
+      document.querySelector('#booking').scrollIntoView({behavior:'smooth'});
+    }
+
+    // ✅ Shared async submit function using Formspree (keeps your current endpoint)
+    async function submitForm(form, resultDiv) {
+      resultDiv.innerHTML = "Sending...";
+      const formData = new FormData(form);
+      try {
+        const response = await fetch("https://formspree.io/f/xldoyojr", {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          resultDiv.innerHTML = `<div style="padding:12px;background:#ecfdf5;border-radius:10px">✅ Thank you! Your message has been sent successfully.</div>`;
+          form.reset();
+        } else {
+          resultDiv.innerHTML = `<div style="padding:12px;background:#fef2f2;border-radius:10px">❌ Something went wrong. Please try again.</div>`;
+        }
+      } catch {
+        resultDiv.innerHTML = `<div style="padding:12px;background:#fef2f2;border-radius:10px">❌ Network error. Please check your connection.</div>`;
+      }
+      // fade out success/error after a short delay for a smoother UX
+      setTimeout(()=>{ resultDiv.innerHTML = ''; }, 8000);
+    }
+
+    // Booking form handler
+    const bookingForm = document.getElementById('bookingForm');
+    const bookingResult = document.getElementById('bookingResult');
+    bookingForm.addEventListener('submit', e => {
+      e.preventDefault();
+      submitForm(bookingForm, bookingResult);
+    });
+
+    // Quick inquiry form handler
+    const inquiryForm = document.getElementById('inquiryForm');
+    const inquiryResult = document.getElementById('inquiryResult');
+    inquiryForm.addEventListener('submit', e => {
+      e.preventDefault();
+      submitForm(inquiryForm, inquiryResult);
+    });
+
+  </script>
 </body>
 </html>
