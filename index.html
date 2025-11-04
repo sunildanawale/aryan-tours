@@ -21,7 +21,7 @@
       font-family: Inter, Poppins, system-ui;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{background:linear-gradient(180deg,#e9fbff,#ffffff);color:var(--text);}
+    body{background:linear-gradient(180deg,#e9fbff,#ffffff);color:var(--text);-webkit-font-smoothing:antialiased}
     header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;position:sticky;top:0;z-index:50;box-shadow:0 6px 20px rgba(8,18,30,0.08)}
     .brand{display:flex;gap:14px;align-items:center}
     .logo{width:56px;height:56px;border-radius:12px;background:rgba(255,255,255,0.1);display:grid;place-items:center;font-weight:800;font-size:18px}
@@ -50,6 +50,12 @@
     .pkg ul{margin:6px 0 0;padding-left:16px;color:var(--muted);font-size:14px}
     .price{background:linear-gradient(90deg,var(--accent3),#ffd77a);padding:6px 10px;border-radius:10px;font-weight:800}
 
+    .pickup-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:10px}
+    .route{background:#fff;border-radius:12px;padding:12px;box-shadow:0 8px 20px rgba(8,18,30,0.06);display:flex;flex-direction:column;gap:8px}
+    .route .meta{display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .route .dest{font-weight:700}
+    .tag-small{display:inline-block;padding:6px 8px;border-radius:999px;background:rgba(6,166,199,0.08);font-weight:700;font-size:13px;color:var(--accent1)}
+
     input,select,textarea{padding:10px;border-radius:10px;border:1px solid #e6f0f5;font-size:15px;width:100%}
     label{font-size:13px;color:var(--muted);margin-bottom:4px}
     .field{margin-bottom:10px}
@@ -74,6 +80,7 @@
     <nav>
       <a href="#services">Services</a>
       <a href="#sightseeing">Sightseeing</a>
+      <a href="#pickup">Pickup & Drop</a>
       <a href="#booking">Book</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -106,6 +113,7 @@
             <option>Taxi Service</option>
             <option>Sightseeing</option>
             <option>Bus Booking</option>
+            <option>Pickup & Drop</option>
           </select>
           <input type="hidden" name="_subject" value="Quick Inquiry from Aryan Tours Website">
           <button class="btn" style="width:100%">Send</button>
@@ -130,42 +138,359 @@
           </div>
         </section>
 
+        <!-- SIGHTSEEING: FULL SET OF 6 TOURS (from your PDF) -->
         <section id="sightseeing" class="card">
           <h2>Sightseeing Packages</h2>
+          <p class="muted">Choose any of our guided/driver-assisted half-day and full-day tours.</p>
+
           <div class="sight-grid">
+            <!-- 1: Mahabaleshwar Darshan (1) -->
             <div class="pkg">
               <div style="display:flex;justify-content:space-between">
                 <div class="tag">Tour 1</div><div class="price">₹1,200</div>
               </div>
-              <h3>Mahabaleshwar Darshan</h3>
+              <h3>Mahabaleshwar Darshan — Classic</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
               <ul>
-                <li>Old Mahabaleshwar • Arthur's Seat</li>
-                <li>Tiger Spring • Savitri Point</li>
+                <li>Old Mahabaleshwar, Panchganga Temple, Lord Shiva Temple</li>
+                <li>Arthur's Seat, Window Point, Tiger Spring, Hunting Point</li>
+                <li>Malcolm Point, Echo Point, Castle Rock Point, Savitri Point</li>
+                <li>Marjorie Point, Elphinstone (Upper & Lower), Kate's Point, Needle Hole</li>
+                <li>Includes a free visit to Strawberry Garden.</li>
               </ul>
-              <button class="btn" style="margin-top:8px" onclick="autoFill('Mahabaleshwar Darshan')">Book Now</button>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Mahabaleshwar Classic')">Book Now</button>
             </div>
+
+            <!-- 2: Mahabaleshwar Darshan (2) -->
             <div class="pkg">
               <div style="display:flex;justify-content:space-between">
-                <div class="tag">Tour 2</div><div class="price">₹1,600</div>
+                <div class="tag">Tour 2</div><div class="price">₹1,200</div>
+              </div>
+              <h3>Mahabaleshwar Darshan — Panoramic</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
+              <ul>
+                <li>Wilson Point (sunrise), Ganesh Temple (Machutar village), Plato Point</li>
+                <li>King's Chair Point, Lingmala Waterfall, Venna Mini Dam</li>
+                <li>Lodwick Point, Mumbai Point and other scenic viewpoints.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Mahabaleshwar Panoramic')">Book Now</button>
+            </div>
+
+            <!-- 3: Pratapgadh -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 3</div><div class="price">₹1,600</div>
               </div>
               <h3>Pratapgadh Fort Tour</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
               <ul>
-                <li>Bhavani Mata Temple • Pratap Garden</li>
+                <li>Pratapgadh Fort, Bhavani Mata Temple, Pratap Garden</li>
+                <li>Shivaji Maharaj Statue, Kadelat Point, Tomb of Afzal Khan</li>
+                <li>Shivkalin Village (Pratapgadh Machi) and historical sights.</li>
               </ul>
-              <button class="btn" style="margin-top:8px" onclick="autoFill('Pratapgadh Fort Tour')">Book Now</button>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Pratapgadh Fort Tour')">Book Now</button>
             </div>
+
+            <!-- 4: Panchgani -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 4</div><div class="price">₹1,200</div>
+              </div>
+              <h3>Panchgani Darshan</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:00 Hrs</div>
+              <ul>
+                <li>Parsi Point, Table Land (caves), Museum (Gureghar)</li>
+                <li>Bhilaar Waterfall (seasonal), Avis World Theme Park / Velocity</li>
+                <li>Mapro Garden visit included in many itineraries.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Panchgani Darshan')">Book Now</button>
+            </div>
+
+            <!-- 5: Wai -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 5</div><div class="price">₹2,500</div>
+              </div>
+              <h3>Wai Darshan (Full Day)</h3>
+              <div class="muted" style="font-size:13px">Duration: 6:00 Hrs</div>
+              <ul>
+                <li>Sydney Point, Wai town, Shri Ganesh Temple, Kashivishveshwar Temple</li>
+                <li>Dhom Dam, Nana Phadnavis Wada (Menavli), Mapro factory (Shendurjane, Wai)</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Wai Darshan')">Book Now</button>
+            </div>
+
+            <!-- 6: Tapola -->
+            <div class="pkg">
+              <div style="display:flex;justify-content:space-between">
+                <div class="tag">Tour 6</div><div class="price">₹1,450</div>
+              </div>
+              <h3>Tapola Darshan (Mini Kashmir)</h3>
+              <div class="muted" style="font-size:13px">Duration: 3:30 Hrs</div>
+              <ul>
+                <li>Mini Kashmir scenery, water sports at Shivsagar, lake visits</li>
+                <li>Honey Village (Manghar) and local attractions.</li>
+              </ul>
+              <button class="btn" style="margin-top:8px" onclick="autoFill('Sightseeing — Tapola Darshan')">Book Now</button>
+            </div>
+
           </div>
         </section>
 
-        <!-- ✅ BOOKING FORM -->
+        <!-- PICKUP & DROP (new separate section) -->
+        <section id="pickup" class="card">
+          <h2>Out of Mahabaleshwar — Pickup & Drop</h2>
+          <p class="muted">Rates shown are base route charges. Toll charges are extra (shown as “+ Toll”). Choose your route and press Book Now to autofill the form.</p>
+
+          <h3 style="margin-top:12px">Nearby Routes 🚗</h3>
+          <div class="pickup-grid">
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Satara Bus Stand</span></div>
+                <div class="price">₹2,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Short / Nearby pickup and drop.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Satara Bus Stand — ₹2,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Satara Railway Station</span></div>
+                <div class="price">₹2,300 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Railway station transfers.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Satara Railway Station — ₹2,300 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Wathar Railway Station</span></div>
+                <div class="price">₹2,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Railway transfers and short outstation.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Wathar Railway Station — ₹2,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Poladpur</span></div>
+                <div class="price">₹2,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Coastal / Konkan route.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Poladpur — ₹2,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Mahad</span></div>
+                <div class="price">₹2,300 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Mahad transfers.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mahad — ₹2,300 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Kas Pathar</span></div>
+                <div class="price">₹3,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Hill / plateau pickup.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Kas Pathar — ₹3,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Sajjangad</span></div>
+                <div class="price">₹3,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Pilgrimage / fort pickup.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Sajjangad — ₹3,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Wai</span></div>
+                <div class="price">₹1,200 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Nearby town transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Wai — ₹1,200 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🚗</span> <span class="dest">Mapro Garden</span></div>
+                <div class="price">₹600 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Short local drop to Mapro Garden / factory.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mapro Garden — ₹600 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+          </div>
+
+          <h3 style="margin-top:16px">Long Distance Routes 🏙️</h3>
+          <div class="pickup-grid">
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Pune Railway Station</span></div>
+                <div class="price">₹3,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Station transfer to Pune.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Pune Railway Station — ₹3,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Pune Airport</span></div>
+                <div class="price">₹4,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Airport pickups / drops.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Pune Airport — ₹4,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Mumbai (Vashi / Dadar)</span></div>
+                <div class="price">₹7,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">City / station transfers to Mumbai suburbs.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mumbai (Vashi / Dadar) — ₹7,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Mumbai Airport</span></div>
+                <div class="price">₹8,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Airport transfers to Mumbai.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Mumbai Airport — ₹8,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Kolhapur</span></div>
+                <div class="price">₹6,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Long-distance road transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Kolhapur — ₹6,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Sangli</span></div>
+                <div class="price">₹6,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Long distance / intercity transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Sangli — ₹6,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Alibaug</span></div>
+                <div class="price">₹5,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Coastal town transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Alibaug — ₹5,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Matheran</span></div>
+                <div class="price">₹7,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Hill station transfer (note: Matheran has vehicle rules for last mile).</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Matheran — ₹7,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Ganpatipule</span></div>
+                <div class="price">₹6,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Coastal pilgrimage / long distance.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Ganpatipule — ₹6,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Chiplun</span></div>
+                <div class="price">₹3,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Konkan route transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Chiplun — ₹3,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Khed</span></div>
+                <div class="price">₹3,000 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Konkan / highway transfer.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Khed — ₹3,000 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+            <div class="route">
+              <div class="meta">
+                <div><span class="tag-small">🏙️</span> <span class="dest">Lonawala / Khandala</span></div>
+                <div class="price">₹5,500 + Toll</div>
+              </div>
+              <div class="muted" style="font-size:13px">Hill station route towards Pune-Mumbai ghats.</div>
+              <div style="display:flex;gap:8px">
+                <button class="btn" onclick="autoFillPickup('Lonavala / Khandala — ₹5,500 + Toll')">Book Now</button>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- BOOKING FORM -->
         <section id="booking" class="card">
-          <h2>Book Your Tour</h2>
+          <h2>Book Your Tour / Transfer</h2>
           <form id="bookingForm">
             <div class="field"><label>Full Name</label><input name="fullname" required></div>
             <div class="field"><label>Phone</label><input name="phone" required></div>
             <div class="field"><label>Service</label>
               <select name="service" required>
-                <option>Hotel Booking</option><option>Taxi Service</option><option>Sightseeing</option>
+                <option>Hotel Booking</option><option>Taxi Service</option><option>Sightseeing</option><option>Pickup & Drop</option>
               </select>
             </div>
             <div class="field"><label>Date</label><input type="date" name="date" required></div>
@@ -178,7 +503,7 @@
       </div>
 
       <aside>
-        <div class="card">
+        <div class="card" id="contact">
           <h3>Contact</h3>
           <p style="margin:6px 0">Aryan Tours & Travels<br>Mahabaleshwar & Panchgani</p>
           <p><strong>Phone:</strong> <a href="tel:+91992288244" style="color:var(--accent1)">+91 992288244</a></p>
@@ -199,13 +524,27 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // Autofill for sightseeing packages
     function autoFill(title){
-      document.querySelector('#bookingForm [name=service]').value='Sightseeing';
-      document.querySelector('#bookingForm [name=notes]').value=title;
+      const formService = document.querySelector('#bookingForm [name=service]');
+      const notes = document.querySelector('#bookingForm [name=notes]');
+      formService.value = 'Sightseeing';
+      notes.value = title;
+      document.querySelector('#bookingForm [name=date]').focus();
       document.querySelector('#booking').scrollIntoView({behavior:'smooth'});
     }
 
-    // ✅ Shared async submit function
+    // Autofill for pickup routes
+    function autoFillPickup(routeText){
+      const formService = document.querySelector('#bookingForm [name=service]');
+      const notes = document.querySelector('#bookingForm [name=notes]');
+      formService.value = 'Pickup & Drop';
+      notes.value = routeText;
+      document.querySelector('#bookingForm [name=date]').focus();
+      document.querySelector('#booking').scrollIntoView({behavior:'smooth'});
+    }
+
+    // ✅ Shared async submit function using Formspree (keeps your current endpoint)
     async function submitForm(form, resultDiv) {
       resultDiv.innerHTML = "Sending...";
       const formData = new FormData(form);
@@ -224,6 +563,8 @@
       } catch {
         resultDiv.innerHTML = `<div style="padding:12px;background:#fef2f2;border-radius:10px">❌ Network error. Please check your connection.</div>`;
       }
+      // fade out success/error after a short delay for a smoother UX
+      setTimeout(()=>{ resultDiv.innerHTML = ''; }, 8000);
     }
 
     // Booking form handler
@@ -241,6 +582,7 @@
       e.preventDefault();
       submitForm(inquiryForm, inquiryResult);
     });
+
   </script>
 </body>
 </html>
